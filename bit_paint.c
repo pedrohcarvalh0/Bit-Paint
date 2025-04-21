@@ -186,7 +186,6 @@ void read_joystick(int16_t *x_value, int16_t *y_value) {
     uint16_t raw_y = adc_read();
     
     // Converte para valores com sinal centralizados em 0
-    // A faixa do ADC é 0-4095, então 2048 é o centro
     *x_value = raw_x - 2048;
     *y_value = 2048 - raw_y;
 }
